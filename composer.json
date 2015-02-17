@@ -1,5 +1,5 @@
 {
-    "name": "thelia/productonlinewithoutstock-module",
+    "name": "thelia/product-online-without-stock-module",
     "type": "thelia-module",
     "license": "LGPL V3",
     "description": "List online products without stock",

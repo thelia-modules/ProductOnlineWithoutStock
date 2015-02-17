@@ -16,7 +16,7 @@ This module allows you to list products online without stock.
 Add it in your main thelia composer.json file
 
 ```
-composer require thelia/productonlinewithoutstock-module:~1.0
+composer require thelia/product-online-without-stock-module:~1.0
 ```
 
 ## Usage
