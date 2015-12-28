@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "thelia/installer": "1.0"
+        "thelia/installer": "~1.0"
     },
     "extra": {
         "installer-name": "ProductOnlineWithoutStock"
