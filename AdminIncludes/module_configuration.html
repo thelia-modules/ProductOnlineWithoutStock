@@ -40,7 +40,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                    {loop type='productonlinewithoutstock_loop' name="productsOffWithStock" visible="yes" order=$product_order page="$product_page" limit=#max_displayed_products#}
+                    {loop type='productonlinewithoutstock_loop' name="productsOffWithStock" visible="yes" order=$product_order page=$product_page limit={config key="number_default_results_per_page.category_list" default=20}}
                         <tr>
                             <td>
                                 {$ID}
@@ -55,7 +55,7 @@
                                 {/elseloop}
                             </td>
                             <td>
-                                {loop type="image" name="product.image" product="{$ID}" limit="1" width="50" height="50" resize_mode="crop" backend_context="1"}
+                                {loop type="image" name="product.image" product=$ID limit=1 width=50 height=50 resize_mode="crop" backend_context=true}
                                     <img src="{$IMAGE_URL}" alt="{$TITLE}" class="img-responsive" itemprop="image" data-toggle="magnify">
                                 {/loop}
                             </td>
@@ -85,7 +85,7 @@
                     {elseloop rel='productsOffWithStock'}
                         <tr>
                             <td colspan="6" class="text-center">
-                                {intl l="No products found" d="productonlinewithoutstock"}
+                                {intl l="No products found" d='productonlinewithoutstock.ai'}
                             </td>
                         </tr>
                     {/elseloop}
@@ -98,7 +98,7 @@
 
             loop_ref       = "productsOffWithStock"
             max_page_count = 10
-            page_url       = "{url path="/admin/module/ProductOnlineWithoutStock" product_order=$product_order}"
+            page_url       = {url path="/admin/module/ProductOnlineWithoutStock" product_order=$product_order}
             }
 
         </div>

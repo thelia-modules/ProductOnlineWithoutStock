@@ -8,23 +8,4 @@
         <loop name="productonlinewithoutstock_loop" class="ProductOnlineWithoutStock\Loop\ProductOnlineWithoutStockLoop" />
     </loops>
 
-    <forms>
-        <!--
-        <form name="MyFormName" class="MyModule\Form\MySuperForm" />
-        -->
-    </forms>
-
-    <commands>
-        <!--
-        <command class="MyModule\Command\MySuperCommand" />
-        -->
-    </commands>
-
-    <!--
-    <services>
-
-    </services>
-    -->
-
-
 </config>
