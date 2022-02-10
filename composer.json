@@ -1,7 +1,7 @@
 {
     "name": "thelia/product-online-without-stock-module",
     "type": "thelia-module",
-    "license": "LGPL V3",
+    "license": "LGPL-3.0+",
     "description": "List online products without stock",
     "authors": [
         {
