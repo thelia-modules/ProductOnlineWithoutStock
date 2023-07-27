@@ -1,9 +1,10 @@
 {assign product_page {$smarty.get.page|default:1}}
+{$product_order=null}
 
-{if $smarty.get.product_order}
-    {assign var="product_order" value=$smarty.get.product_order}
+{if $smarty.get.product_order|default:null}
+    {assign var="product_order" value=$smarty.get.product_order|default:null}
 {else}
-    {assign var="product_order" value="id"}
+    {assign var="product_order" value="id"|default:null}
 {/if}
 
 <div class="row">
