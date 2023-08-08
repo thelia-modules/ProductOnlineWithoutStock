@@ -7,7 +7,7 @@
     <descriptive locale="fr_FR">
         <title>Produits en ligne sans stock</title>
     </descriptive>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <author>
         <name>Julien Citerne</name>
         <email>jciterne@openstudio.fr</email>
