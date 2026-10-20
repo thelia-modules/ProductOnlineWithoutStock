@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <config xmlns="http://thelia.net/schema/dic/config"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://thelia.net/schema/dic/config http://thelia.net/schema/dic/config/thelia-1.0.xsd">
-
-    <loops>
-        <loop name="productonlinewithoutstock_loop" class="ProductOnlineWithoutStock\Loop\ProductOnlineWithoutStockLoop" />
-    </loops>
-
+    <!-- Required by Thelia's ModuleValidator. Hooks, controllers and services are autoconfigured
+         (see the module class configureServices()). -->
 </config>

@@ -10,26 +10,27 @@
 /*      file that was distributed with this source code.                             */
 /*************************************************************************************/
 
+declare(strict_types=1);
+
 namespace ProductOnlineWithoutStock;
 
-use Thelia\Module\BaseModule;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ServicesConfigurator;
+use Thelia\Module\BaseModule;
 
 /**
- * Class ProductOnlineWithoutStock
- * @package ProductOnlineWithoutStock
+ * Lists the visible products that have no stock left on any of their sale elements.
+ *
  * @author Julien Citerne <jciterne@openstudio.fr>
  * @author Gilles Bourgeat <gbourgeat@openstudio.fr>
  */
 class ProductOnlineWithoutStock extends BaseModule
 {
-    /** @var string */
-    const MODULE_DOMAIN = 'productonlinewithoutstock';
+    public const DOMAIN_NAME = 'productonlinewithoutstock';
 
     public static function configureServices(ServicesConfigurator $servicesConfigurator): void
     {
         $servicesConfigurator->load(self::getModuleCode().'\\', __DIR__)
-            ->exclude([THELIA_MODULE_DIR . ucfirst(self::getModuleCode()). "/I18n/*"])
+            ->exclude([__DIR__.'/I18n/*'])
             ->autowire(true)
             ->autoconfigure(true);
     }

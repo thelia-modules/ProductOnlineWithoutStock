@@ -1,2 +1,5 @@
 <?php
-return array();
+
+return [
+    'Product Online Without Stock' => 'Products online without stock',
+];
