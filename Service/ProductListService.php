@@ -42,7 +42,13 @@ class ProductListService
             ->orderBy($column, $direction);
 
         $perPage = max(1, (int) ConfigQuery::read('number_default_results_per_page.category_list', 20));
-        $pager = $query->paginate(max(1, $page), $perPage);
+        $page = max(1, $page);
+        $pager = $query->paginate($page, $perPage);
+
+        $lastPage = max(1, $pager->getLastPage());
+        if ($page > $lastPage) {
+            $pager = $query->paginate($lastPage, $perPage);
+        }
 
         $items = [];
         foreach ($pager->getResults() as $product) {
@@ -59,7 +65,7 @@ class ProductListService
             'items' => $items,
             'order' => $order,
             'current_page' => $pager->getPage(),
-            'total_pages' => max(1, $pager->getLastPage()),
+            'total_pages' => $lastPage,
             'total_count' => $pager->getNbResults(),
         ];
     }
